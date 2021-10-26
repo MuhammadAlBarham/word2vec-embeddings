@@ -27,3 +27,22 @@ and it means that it corresponds to the 148th row of the embedding matrix.
 
 Then, to reduce th noise from our data and to get better training and representation, subsampling is used.
 
+  
+## Do we need all layers of the network?
+  
+It depends on the application but for this application we need embedding layers only (as a lookup table).
+ 
+The image below shows a network for input, embedding and output layer. We only need the embedding layer.
+  
+![a](https://github.com/MuhammadAlBarham/word2vec-embeddings/blob/9f2d9e83896630355afb0af992abaaab8122f71c/assets/skip_gram_arch.png)
+  
+ 
+ ## Validation
+  
+  The validation is done by cosine similarity.
+ 
+ ## Visualization for the results
+  
+  
+  
+  
