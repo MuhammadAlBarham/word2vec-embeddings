@@ -59,3 +59,6 @@ There are two modifications we need to make. First, since we're not taking the s
 ![](https://github.com/MuhammadAlBarham/word2vec-embeddings/blob/7ac7db3f5b1f520de1de43c4d5d75a9fc082c2dc/assets/NS_img.png)
   
   
+ ## Referance: 
+  
+  This work depends on this project, [here](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/word2vec-embeddings)
