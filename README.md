@@ -41,8 +41,24 @@ The image below shows a network for input, embedding and output layer. We only n
   
   The validation is done by cosine similarity.
  
+## What is Negative Sampling?
+  
+For every example we give the network, we train it using the output from the softmax layer. That means for each input, we're making very small changes to millions of weights even though we only have one true example. This makes training the network very inefficient. We can approximate the loss from the softmax layer by only updating a small subset of all the weights at once. We'll update the weights for the correct example, but only a small number of incorrect, or noise, examples. This is called "negative sampling".
+
+There are two modifications we need to make. First, since we're not taking the softmax output over all the words, we're really only concerned with one output word at a time. Similar to how we use an embedding table to map the input word to the hidden layer, we can now use another embedding table to map the hidden layer to the output word. Now we have two embedding layers, one for input words and one for output words. Secondly, we use a modified loss function where we only care about the true example and a small subset of noise examples.
+  
  ## Visualization for the results
   
+ ### Results for skip_GRams_Exercise:
+  
+![](https://github.com/MuhammadAlBarham/word2vec-embeddings/blob/7ac7db3f5b1f520de1de43c4d5d75a9fc082c2dc/assets/SG_img.png)
+  
+
+### Results for Negative_Sampling_Exercise:
+ 
+![](https://github.com/MuhammadAlBarham/word2vec-embeddings/blob/7ac7db3f5b1f520de1de43c4d5d75a9fc082c2dc/assets/NS_img.png)
   
   
+ ## Referance: 
   
+  This work depends on this project, [here](https://github.com/udacity/deep-learning-v2-pytorch/tree/master/word2vec-embeddings)
